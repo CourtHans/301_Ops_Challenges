@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Script:                       301 Op Challenge Day 2
+# Author:                       Courtney Hans
+# Date of latest revision:      09/01/20
+# Purpose:                      Append; Date and Time
+
+# Create a script that copies /var/log/syslog to the current working directory an>
+
+# Declare variables
+
+year=`date +%Y`
+month=`date +%m`
+day=`date +%d`
+hour=`date +%H`
+minute=`date +%M`
+second=`date +%S`
+weekday=`date +%A`
+fulldate=`date +%D`
+fulltime=`date +%r`
+current_date_time=$fulldate-$hour:$minute
+# Declare functions
+
+# Main
+# reference: https://stackoverflow.com/questions/22589984/copying-syslog-file-to->
+# reference: https://www.cyberciti.biz/faq/unix-linux-appleosx-bsd-shell-appendin>
+echo "The full date and time is $current_date_time"
+
+echo "At $hour:$minute, I will copy the syslog to my current working directory"
+cp "/var/log/syslog" "./"
+echo "Then today, $weekday $month/$day, I'll append the file with a timestamp."
+echo "The date and time is: $current_date_time" >> syslog
+echo "Finally, I'll show the contents of the file in the terminal in the year $ye>
+cat syslog
+
+# End
