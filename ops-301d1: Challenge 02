@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Script:                       Op Challenge Day 4
+# Author:                       Courtney Hans
+# Date of latest revision:      9/2/20
+# Purpose:                      Changing file permissions
+
+# Declare variables
+# Prompts user for input directory path.
+
+echo "Please enter an absolute directory path:"
+read path
+
+# Prompts user for input permissions number (e.g. 777 to perform a chmod 777)
+
+echo "What permission number would you like to change" $path "to?"
+read chmod_number
+
+# Declare functions
+
+function change() {
+sudo chmod -R $chmod_number $path
+}
+
+# Main
+
+# Navigates to the directory input by the user and changes all files inside it to the input setting.
+change
+
+# Prints to the screen the directory contents and the new permissions settings of everything in the directory.
+echo "Printing file permissions of" $path
+ls -al $path
+
+
+# End
+
