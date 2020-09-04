@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Script:                       Ops Challenge Day 5
+# Author:                       Courtney Hans
+# Date of latest revision:      9/4/20
+# Purpose:                      Clearing Logs
+
+# Note: due to permissions, script must be executed by super user (e.g. su>
+
+# Declare variables
+# Declare functions
+
+# Main
+
+#navigating to directory
+cd /var/log
+
+# printing BEFORE contents
+echo "Here are the contents of syslog BEFORE clearing"
+echo
+cat syslog
+echo
+echo "Here are the contents of wtmp BEFORE clearing"
+echo
+cat wtmp
+
+# clearing the files
+cd /var/log
+cat /dev/null > syslog
+cat /dev/null > wtmp
+
+# printing contents AFTER clearing
+echo "syslog AFTER clearing"
+cat syslog
+echo
+echo "wtmp AFTER clearing"
+cat wtmp
+echo
+echo
+echo "Thank you for coming to my TED talk."
+
+# End
