@@ -8,7 +8,7 @@
 # Declare functions
 # Main
 
-New-ADUser -SamAccountName "fferdinand" -Name "Franz Ferdinand" -GivenName "Franz" -Surname "Ferdinand" -Company "Globex USA" -City "Springfield" -State "OR" -Department "TPS Department" -OtherAttributes @{'title'="TPS Reporting Lead"''mail'="ferdi@globexnuclear.com"} -AccountPassword(Read-Host -AsSecureString "Type Password for User"")
+New-ADUser -SamAccountName "fferdinand" -Name "Franz Ferdinand" -GivenName "Franz" -Surname "Ferdinand" -Company "Globex USA" -City "Springfield" -State "OR" -Department "TPS Department" -OtherAttributes @{'title'="TPS Reporting Lead"''mail'="ferdi@globexnuclear.com"} -AccountPassword(Read-Host -AsSecureString "Type Password for User")
 
 # resource: https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-aduser?view=win10-ps
 # resource: https://www.rebeladmin.com/2018/01/create-active-directory-user-objects-using-powershell/
